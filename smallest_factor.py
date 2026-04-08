@@ -1,6 +1,6 @@
 #! /usr/bin/env python3
 
-# A script for getting the smallest prime factor of an integer.
+"A module for getting the smallest prime factor of an integer."
 
 import sys
 
