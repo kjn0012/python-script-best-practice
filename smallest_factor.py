@@ -16,21 +16,23 @@ print("Step 3: Check if the number is positive")
 if n < 1:
     sys.exit(sys.argv[0] + ": Expecting a positive integer")
 
-print("Step 4: Initialize variable to store smallest factor and loop through possible factors from 2 to n-1")
+print("Step 4: Initialize function to find smallest factor")
 
 def smallest_prime_factor(n):
-for i in range(2, n):
-    print(f"  Check if {i} divides {n}")
-    if (n % i) == 0:
-        print(f"  Found a factor: {i}")
-        return i
-    return None
+    for i in range(2, n):
+        print(f"  Check if {i} divides {n}")
+        if (n % i) == 0:
+            print(f"  Found a factor: {i}")
+            return i
+    return None  # ← moved outside loop
+
+print("Step 5: Compute result")
+result = smallest_prime_factor(n)
 
 print("Step 6: Results")
-
-if smallest_prime_factor is None:
+if result is None:
     print(f"No factors found. {n} is prime.")
     print(n)
 else:
-    print(f"Smallest factor of {n} is {x}")
-    print(smallest_prime_factor)
+    print(f"Smallest factor of {n} is {result}")
+    print(result)
