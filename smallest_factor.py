@@ -34,6 +34,14 @@ def get_smallest_prime_factor(n):
     int or None
         The smallest integer that is a factor of `n`
         or None if `n` is a prime.
+
+    Examples
+    --------
+    >>> get_smallest_prime_factor(7)
+    >>> get_smallest_prime_factor(8)
+    2
+    >>> get_smallest_prime_factor(9)
+    3
     """
     for i in range(2, n):
         if (n % i) == 0:
